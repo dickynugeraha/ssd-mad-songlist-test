@@ -2,11 +2,12 @@ import React from 'react';
 import {Text, StyleSheet, useColorScheme} from 'react-native';
 
 const TextCustom = ({children, style, variant = 'regular', ...props}) => {
-  const colorScheme = useColorScheme();
-  const fontColor = colorScheme === 'dark' ? '#f1f1f1' : '#333';
+  // const colorScheme = useColorScheme();
+  // const fontColor = colorScheme === 'dark' ? '#f1f1f1' : '#333';
+  const fontColor = 'dark';
 
   return (
-    <Text style={[styles[variant], {color: `${fontColor}`}, style]} {...props}>
+    <Text style={[styles[variant], style]} {...props}>
       {children}
     </Text>
   );
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   small: {
-    fontSize: 14,
+    fontSize: 15,
   },
 });
 
